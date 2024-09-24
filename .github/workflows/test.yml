@@ -24,10 +24,16 @@ jobs:
         pip install pytest pytest-cov pylint  # Install pytest, coverage, and pylint
         pip install -r requirements.txt  # If you have additional requirements
 
+      githubActions
     - name: Run test with pytest
       run: |
         pylint --cov --pylint
-      continue-on-error: false  # Fail if pylint errors
+
+    - name: Run pylint
+      run: |
+        pylint your_package/  # Adjust this path to the directory with your Python code
+      main
+
 
     - name: Run tests with coverage
       run: |
