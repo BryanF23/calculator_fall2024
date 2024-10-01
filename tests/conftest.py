@@ -1,31 +1,18 @@
-"""
-This module contains test fixtures for initializing the calculator and REPL.
-"""
-
+# Fixture to create a Calculator instance
 import sys
 import pexpect
 import pytest
+
 from app.calculator import Calculator
 
 
 @pytest.fixture
 def calc():
-    """
-    Fixture to create a Calculator instance.
-    
-    Returns:
-        Calculator: A new Calculator instance.
-    """
     return Calculator.create()
 
 @pytest.fixture
 def repl():
-    """
-    Fixture to start the REPL application.
-    
-    Yields:
-        pexpect.spawn: The REPL child process.
-    """
+    """Fixture to start the REPL application."""
     # Path to the main.py script
     script = 'main.py'
 

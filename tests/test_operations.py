@@ -40,4 +40,3 @@ def test_division_by_zero_exception():
     '''Division function testing that I get the exception divide by zero'''
     with pytest.raises(ZeroDivisionError):
         division(10, 0)
-        
